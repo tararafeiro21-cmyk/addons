@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Weather Dashboard</h1>
+
+    <form id="search-form" class="search">
+      <input id="city-input" type="search" placeholder="Enter city (e.g. London)" aria-label="City name" required />
+      <button type="submit">Search</button>
+      <button id="geo-btn" type="button">Use my location</button>
+    </form>
+
+    <section id="result" class="result hidden" aria-live="polite">
+      <div class="summary">
+        <img id="icon" alt="weather icon" src="" />
+        <div>
+          <h2 id="city"></h2>
+          <p id="desc"></p>
+        </div>
+      </div>
+
+      <ul class="details">
+        <li>Temperature: <strong id="temp"></strong></li>
+        <li>Feels like: <strong id="feels"></strong></li>
+        <li>Humidity: <strong id="humidity"></strong></li>
+        <li>Wind: <strong id="wind"></strong></li>
+      </ul>
+    </section>
+
+    <div id="loading" class="loading hidden">Loading…</div>
+    <div id="error" class="error hidden" role="alert"></div>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
